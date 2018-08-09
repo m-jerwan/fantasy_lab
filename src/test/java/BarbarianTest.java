@@ -1,5 +1,6 @@
 import Player.Fighter.Barbarian;
 import Weapon.Club;
+import Weapon.Sword;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,12 +8,16 @@ import static junit.framework.TestCase.assertEquals;
 
 public class BarbarianTest {
     Club club_1;
+    Club club_2;
+    Sword sword_1;
     Barbarian barbarian_1;
 
 
     @Before
     public void before(){
         club_1 = new Club(20);
+        club_2 = new Club(25);
+        sword_1 = new Sword(10);
         barbarian_1 = new Barbarian("Conan", 40, 90, club_1 );
     }
 
@@ -45,6 +50,17 @@ public class BarbarianTest {
     @Test
     public void canAttack(){
         assertEquals(20, barbarian_1.attack());
+    }
 
+    @Test
+    public void canSwapWeaponsOtherClub(){
+        barbarian_1.swapWeapon(club_2);
+       assertEquals("Club", barbarian_1.getWeapon().type());
+    }
+
+    @Test
+    public void canSwapWeaponsSword(){
+        barbarian_1.swapWeapon(sword_1);
+        assertEquals("Sword", barbarian_1.getWeapon().type());
     }
 }

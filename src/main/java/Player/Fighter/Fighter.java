@@ -2,6 +2,7 @@ package Player.Fighter;
 
 import Player.Player;
 import Weapon.IWeapon;
+import Weapon.Club;
 
 public abstract class Fighter extends Player {
 
@@ -30,5 +31,9 @@ public abstract class Fighter extends Player {
 
     public int attack(){
         return this.weapon.use();
+    }
+
+    public void swapWeapon(IWeapon newWeapon) {
+        this.weapon = newWeapon;
     }
 }
