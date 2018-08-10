@@ -18,7 +18,7 @@ public class DwarfTest {
 
     @Test
     public void haveWeapon(){
-        assertEquals("Axe", dwarf_1.getWeapon().type());
+        assertEquals("Axe", dwarf_1.getWeapon().getType());
     }
 }
 

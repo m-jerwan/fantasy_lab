@@ -44,7 +44,7 @@ public class BarbarianTest {
 
     @Test
     public void haveWeapon(){
-        assertEquals("Club", barbarian_1.getWeapon().type());
+        assertEquals("Club", barbarian_1.getWeapon().getType());
     }
 
     @Test
@@ -55,12 +55,12 @@ public class BarbarianTest {
     @Test
     public void canSwapWeaponsOtherClub(){
         barbarian_1.swapWeapon(club_2);
-       assertEquals("Club", barbarian_1.getWeapon().type());
+       assertEquals("Club", barbarian_1.getWeapon().getType());
     }
 
     @Test
     public void canSwapWeaponsSword(){
         barbarian_1.swapWeapon(sword_1);
-        assertEquals("Sword", barbarian_1.getWeapon().type());
+        assertEquals("Sword", barbarian_1.getWeapon().getType());
     }
 }

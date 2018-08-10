@@ -18,7 +18,7 @@ public class KnightTest {
 
     @Test
     public void haveWeapon(){
-        assertEquals("Sword", knight_1.getWeapon().type());
+        assertEquals("Sword", knight_1.getWeapon().getType());
     }
 }
 

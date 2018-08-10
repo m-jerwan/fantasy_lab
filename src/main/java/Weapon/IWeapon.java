@@ -4,6 +4,6 @@ public interface IWeapon {
 
     public int use();
 
-    public String type();
+    public String getType();
 }
 

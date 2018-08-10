@@ -1,4 +1,3 @@
-import Spell.Fireball;
 import Spell.IceBlast;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +9,17 @@ public class IceBlastTest {
 
     @Before
     public void before(){
-        iceBlast_1= new IceBlast(30);
+        iceBlast_1= new IceBlast(30, 10);
+    }
+
+    @Test
+    public void hasName(){
+        assertEquals("IceBlast", iceBlast_1.getType());
+    }
+
+    @Test
+    public void hasManaCost(){
+        assertEquals(10, iceBlast_1.getManaCost());
     }
 
     @Test

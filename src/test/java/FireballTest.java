@@ -9,7 +9,17 @@ public class FireballTest {
 
     @Before
     public void before(){
-        fireball_1 = new Fireball(30);
+        fireball_1 = new Fireball(30, 20);
+    }
+
+    @Test
+    public void hasName(){
+        assertEquals("Fireball", fireball_1.getType());
+    }
+
+    @Test
+    public void hasManaCost(){
+        assertEquals(20, fireball_1.getManaCost());
     }
 
     @Test

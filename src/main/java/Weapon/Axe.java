@@ -22,7 +22,7 @@ public class Axe implements IWeapon {
     }
 
     @Override
-    public String type() {
+    public String getType() {
         return this.type;
     }
 }
