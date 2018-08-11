@@ -63,4 +63,11 @@ public class BarbarianTest {
         barbarian_1.swapWeapon(sword_1);
         assertEquals("Sword", barbarian_1.getWeapon().getType());
     }
+    @Test
+    public void startsZeroBodyToxicity(){
+        assertEquals(0, barbarian_1.getBodyToxicity());
+    }
+
+
 }
+
